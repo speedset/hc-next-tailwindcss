@@ -1,0 +1,95 @@
+.dor-check{  
+  --ancho:60px;
+  --alto:30px;
+  --circulo:calc(var(--alto)*0.8);
+  --relleno:calc(var(--ancho)*0.04);
+  --borde:calc(var(--ancho)*0.01)
+  display:flex;
+  width:var(--ancho);
+  height:var(--alto);  
+  margin:50px;
+}
+
+.chk2{
+  display:none;
+  width:0;
+  height:0;
+  position:relative;
+  z-index:-100;
+}
+
+.lbl2{  
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content:flex-end;
+  background-color: #E5E7E9;
+  width:100%;
+  height:100%;
+  padding-left:calc(var(--relleno) + var(--borde));  
+  border-radius:calc(var(--alto)*0.5);
+  cursor:pointer;
+  border: solid var(--borde) #A6ACAF;
+  transition: all 350ms ease-out;
+}
+
+.circulo{  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  height:var(--circulo);
+  width:var(--circulo);
+  background:#FDFEFE;
+  border-radius:50%;
+  transition: all 350ms;
+}
+
+.invi{
+  display:flex;  
+  opacity:0;
+  visibility:hidden;
+  height:var(--alto);
+  width:calc(var(--ancho) - var(--circulo) - var(--relleno));
+  background:transparent;
+  transition: all 350ms;
+}
+
+.sun-svg{
+  opacity: 1;
+  display:flex;  
+  color:#95989A;  
+  transition: all 350ms ease-in;
+  height:100%;
+  width:100%;
+}
+
+.moon-svg{
+  opacity: 0;
+  display:flex;
+  position:absolute;
+  height:98%;
+  width:100%;
+  z-index:10;  
+  rotate:260deg;
+  color:#95989A;  
+  transition: all 350ms ease-out;
+}
+
+.chk2:checked ~ .lbl2{
+  background:#52BE80;
+}
+    
+.chk2:checked ~ .lbl2 > .circulo > .sun-svg{
+  opacity: 0;
+  transition: all 350ms ease-out; 
+}
+
+.chk2:checked ~ .lbl2 > .circulo > .moon-svg{
+  opacity: 1;
+  transition: all 350ms ease-in; 
+}
+
+.chk2:checked ~ .lbl2 > .invi {  
+  width:calc(var(--relleno) + var(--relleno) / 2 - var(--borde));
+}
