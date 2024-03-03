@@ -3,10 +3,13 @@ import HeaderHome from "@/ui/header-home"
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col w-full h-full overflow-y-auto overflow-x-hidden">
+    <div className="flex flex-col w-full min-h-screen overflow-auto ">
       <HeaderHome />
-      <main className="flex flex-1 h-full w-full bg-yellow-200">
-        CULO
+      <main className="flex flex-col h-full w-full bg-yellow-200">
+      <section className="flex h-52 w-full items-center bg-red-400"></section>
+      <section className="flex h-52 w-full items-center bg-green-400"></section>
+      <section className="flex h-52 w-full items-center bg-red-400"></section>
+      <section className="flex h-52 w-full items-center bg-green-400"></section>
       </main>
     </div>
   );

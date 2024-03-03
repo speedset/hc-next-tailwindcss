@@ -3,7 +3,7 @@ import {CalendarIcon, AcademicCapIcon, ArrowLeftIcon} from "@heroicons/react/24/
 
 export default function SideNav() {
   return (
-    <aside className="flex  h-screen min-h-screen w-64 max-md:w-20 text-neutral-300 flex-col overflow-y-hidden bg-stone-800 duration-300 ease-linear ">
+    <aside className="flex min-h-screen w-64 max-md:w-20 text-neutral-300 flex-col overflow-y-hidden bg-stone-800 duration-300 ease-linear ">
     <header className="flex items-center justify-between py-6 px-2 border-b border-green-600">
       <div className="flex items-center gap-2 w-full">        
         <AcademicCapIcon className="w-7 h-7"/>
