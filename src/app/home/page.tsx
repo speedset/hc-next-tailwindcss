@@ -10,6 +10,8 @@ export default function Home() {
       <section className="flex h-52 w-full items-center bg-green-400"></section>
       <section className="flex h-52 w-full items-center bg-red-400"></section>
       <section className="flex h-52 w-full items-center bg-green-400"></section>
+      <section className="flex h-52 w-full items-center bg-yellow-400"></section>
+      <section className="flex h-52 w-full items-center bg-gray-400"></section>
       </main>
     </div>
   );
